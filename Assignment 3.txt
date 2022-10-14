@@ -1,0 +1,191 @@
+// 01. Write a program that takes user’s name as command line argument and prints Welcome <entered user name>.
+
+class Welcome{
+	public static void main(String args[])
+	{
+      System.out.println("Welcome " + args[0]);	
+		
+		
+	}
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*02.	Write a program that takes radius of a circle as input. Read the entered radius using Scanner class. 
+        then calculate and print the area and circumference of the circle.*/
+import java.util.Scanner;
+class Circle
+{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+	System.out.println("enter the radius of circle  : ");
+	float r = sc.nextFloat();
+	double a, c;
+	
+	a = 3.14*r*r;
+	c = 2 * 3.14*r;
+	
+	System.out.println("Area of circle  =" +a);
+	System.out.println("Circumference of circle  ="+c);
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* 03 . write a program to calculate sum of 5 subject’s marks & find percentage. 
+  Take the obtained marks from user using Scanner class. Output should be in this format [ percentage marks = 99 % ]. 
+  Use concatenation operator here.  */
+ 
+import java.util.Scanner;
+class StudentMarks{
+public static void main(String[] args){
+  Scanner sc = new Scanner(System.in);
+   double per;
+  System.out.println("enter the marks of subject 1 = ");
+  int a = sc.nextInt();
+   System.out.println("enter the marks of subject 2 = ");
+  int b = sc.nextInt();
+   System.out.println("enter the marks of subject 3 = ");
+  int c = sc.nextInt();
+   System.out.println("enter the marks of subject 4 = ");
+  int d = sc.nextInt();
+   System.out.println("enter the marks of subject 5 = ");
+  int e = sc.nextInt();
+  
+  
+  int tot = a+b+c+d+e;
+  per= (tot/500.0)*100;
+  System.out.println("Percentage marks = " + per);
+  }
+  }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*0.4	Write a program to find the simple interest. Take the principle amount, 
+ rate of interest and time from user using Scanner class.*/
+
+import java.util.Scanner;
+class SimpleInterest{
+public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+ System.out.println("enter Principle amount = ");
+ int pa = sc.nextInt();
+ System.out.println("enter Rate of interest = ");
+ int ri = sc.nextInt();
+ System.out.println("enter Time = ");
+ int t = sc.nextInt();
+ 
+ int si =(pa*ri*t)/100;
+ System.out.println("Simple Interest is : "+ si);
+ }
+ }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* 05.	Write a program to read the days (eg. 670 days) as integer value using Scanner class. Now convert the entered days into complete years, months and days and print them. */
+
+import java.util.Scanner;		
+class DayConverts{
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+	System.out.println("Number Of Days To convert is : ");
+	int a = sc.nextInt();
+	  
+	int year = a/365;
+    a = a % 365;	
+	  
+	int month = a / 30;  
+	a = a % 30;  
+	int day = a;  
+	  System.out.println(year + "year"+ month +"month" + day + "day");
+  }
+}
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* 06.	Write a program to convert temperature from Fahrenheit to Celsius. 
+        Take Fahrenheit as input using Scanner class. [ formula : C= 5*(f-32)/9 ]. */
+		
+import java.util.Scanner;
+class CalFahrenheit{
+public static void main(String[] args) {
+ Double f, C;
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Fahrenheit temperature is : ");
+ 
+ f = sc.nextDouble();
+ C=5 * (f-32)/9;
+ 
+ System.out.println("Celsius = " + C);
+
+  }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 07.	Write a program to swap two numbers without using third variable.
+
+import java.util.Scanner;
+
+class SwapWithoutUsingThirdVariable{
+ public static void main(String[] args){
+ Scanner sc = new Scanner(System.in);
+ 
+ int x,y;
+  System.out.println("enter the value of x :" );
+  System.out.println("enter the value of y :" );
+  x=sc.nextInt();
+  y=sc.nextInt();
+  
+
+  System.out.println("before swap" + x + "and" + y);
+  
+  x=x+y;
+  y=x-y;
+  x=x-y;
+  
+  System.out.println("after swap" + x + "and" + y);
+  }
+  }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* 08.	In a company an employee is paid as under: If his basic salary is less than Rs. 10000, then HRA = 10% of basic salary 
+and DA = 90% of basic salary.If his salary is either equal to or above Rs. 10000, then HRA = Rs. 2000 and DA = 98% of basic salary. 
+If the employee's salary is input by the user write a program to find his gross salary. [ formula : GS= Basic + DA + HRA ]. */
+
+import java.util.Scanner;
+class FindGrossSalary {
+	public static void main(String[] args) {
+    double Bsal, DA, HRA, GS;	
+	Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the Employee Salary = ");
+    Bsal=sc.nextDouble();
+
+    if(Bsal<10000.0)     
+		{
+			
+			 HRA=Bsal*10.0/100.0;
+			 DA=Bsal*90.0/100.0;
+			 GS = Bsal + DA + HRA;	
+			 System.out.println("Employee Gross Salary = "+GS);
+		}
+		else if(Bsal>=10000.0)
+		{
+			
+			HRA=2000.0;
+			DA=Bsal*98.0/100.0;
+		    GS = Bsal + DA + HRA;	
+            System.out.println("Employee Gross Salary = "+GS);
+		}
+         else {
+                 System.out.println("Invalid data");
+		 }			 	
+	}
+}	
+	
+
+
+	
+		
+		
